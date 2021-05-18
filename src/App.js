@@ -1,12 +1,25 @@
-import AppList from "./components/AppList";
+import { Route, Switch } from 'react-router-dom';
+
+import AllMeetupsPage from './pages/AllMeetups';
+import NewMeetupPage from './pages/NewMeetup';
+import FavoritesPage from './pages/Favorites';
+import MainNavigation from './components/layout/MainNavigation';
 
 function App() {
   return (
     <div>
-      <h1>Demo APP</h1>
-      <AppList text="First App #001" />
-      <AppList text="Second App #002" />
-      <AppList text="Third App #003" />
+      <MainNavigation />
+      <Switch>
+        <Route path='/' exact={true}>
+          <AllMeetupsPage />
+        </Route>
+        <Route path='/new-meetup'>
+          <NewMeetupPage />
+        </Route>
+        <Route path='/favorites'>
+          <FavoritesPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
