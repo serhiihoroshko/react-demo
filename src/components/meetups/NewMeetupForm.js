@@ -38,7 +38,7 @@ function NewMeetupForm(props) {
           <input type='text' required id='address' ref={addressInputRef} />
         </div>
         <div className={classes.control}>
-          <lable htmlFor='description'>Meetup Title</lable>
+          <lable htmlFor='description'>Meetup Description</lable>
           <textarea
             id='discription'
             required
